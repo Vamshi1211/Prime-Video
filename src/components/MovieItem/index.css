@@ -1,0 +1,44 @@
+/* Write your CSS here */
+.list-item-container {
+  list-style-type: none;
+  color: #ffffff;
+  width: 80%;
+  margin: auto;
+}
+.popup-content {
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.react-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.react-player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.button-container {
+  align-self: flex-end;
+}
+
+.trigger-button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 15px 8px 18px;
+  border: none;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.thumbnail-image {
+  width: 100%;
+}
