@@ -1,34 +1,36 @@
-// Write your code here
 import Popup from 'reactjs-popup'
-import {IoMdClose} from 'react-icons/io'
 import ReactPlayer from 'react-player'
+import {IoMdClose} from 'react-icons/io'
+
+import 'reactjs-popup/dist/index.css'
+
 import './index.css'
 
 const MovieItem = props => {
-  const {eachActionItem} = props
-  const {thumbnailUrl, videoUrl} = eachActionItem
+  const {movieDetails} = props
+  const {thumbnailUrl, videoUrl} = movieDetails
+
   return (
-    <div className="list-item-container">
+    <div>
       <Popup
         modal
         trigger={
-          <img src={thumbnailUrl} alt="thumbnail" className="thumbnail-image" />
+          <img className="thumbnail" src={thumbnailUrl} alt="thumbnail" />
         }
         className="popup-content"
       >
         {close => (
-          <div className="react-container">
-            <div className="button-container" data-testid="closeButton">
-              <button
-                type="button"
-                className="trigger-button"
-                onClick={() => close()}
-              >
-                <IoMdClose className="icon" />.
-              </button>
-            </div>
-            <div className="react-player-container">
-              <ReactPlayer url={videoUrl} controls width={900} height={400} />
+          <div className="modal-container">
+            <button
+              className="close-button"
+              type="button"
+              data-testid="closeButton"
+              onClick={() => close()}
+            >
+              <IoMdClose size={20} color="#231f20" />
+            </button>
+            <div className="movie-player-container">
+              <ReactPlayer url={videoUrl} controls />
             </div>
           </div>
         )}

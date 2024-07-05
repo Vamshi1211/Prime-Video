@@ -4,18 +4,7 @@
 .slider-container {
   padding: 20px 60px 20px 60px;
 }
-.action-heading {
-  color: #ffffff;
-  font-family: 'Roboto';
-  font-size: 24px;
-  margin-left: 35px;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 768px) {
-  .action-heading {
-    font-size: 18px;
-  }
-}
+
 .comedy-heading {
   color: #ffffff;
   font-family: 'Roboto';
